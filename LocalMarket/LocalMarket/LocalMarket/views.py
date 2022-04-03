@@ -3,12 +3,12 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
 
-from LocalMarket.LocalMarket.LocalMarket.models import Item
-from LocalMarket.LocalMarket.LocalMarket.serializer import ItemSerializer
+from .models import Item
+from .serializer import ItemSerializer
 
 
 @api_view(['GET'])
-def ApiOverview(request):
+def api_overview(request):
     api_urls = {
         'all_items': '/',
         'Search by Category': '/?category=category_name',
